@@ -1,22 +1,22 @@
 import React, {Component} from 'react';
+import  ReactDOM  from 'react-dom/client';
 import {render} from 'react-dom';
-import {HomePage, RoomJoinPage, CreateRoomPage} from './index';
 
-export default class App extends Component{
-    constructor(props){
-        super(props);
-    }
-
-    render(){
-        return (
+const App = ()=>{
+    return(
         <div>
-            <HomePage/>
-            <RoomJoinPage/>
-            <CreateRoomPage/>
+            <h1>Test app</h1>
         </div>
-        );
-    }
+    )
 }
+export default App
 
-const appDiv = document.getElementById("app");
-render(<App/>, appDiv);
+/*
+const root = ReactDOM.createRoot(document.getElementById("app"));
+root.render(
+    <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)*/
+//const appDiv = document.getElementById("app");
+//render(<App/>, appDiv);
